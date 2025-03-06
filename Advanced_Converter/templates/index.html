@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Document Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Document Converter</h1>
+        <div class="upload-box" id="uploadBox">
+            <p>Drag & Drop files here or click to upload</p>
+            <input type="file" id="fileInput" multiple>
+        </div>
+        <div class="conversion-options">
+            <select id="conversionType">
+                <option value="images_to_pdf">Images to PDF</option>
+                <option value="pdf_to_docx">PDF to DOCX</option>
+                <option value="docx_to_pdf">DOCX to PDF</option>
+            </select>
+            <button id="convertBtn">Convert</button>
+        </div>
+        <div id="statusMessage"></div>
+        <div id="downloadLink" class="hidden">
+            <a id="downloadAnchor" download>Download Converted File</a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
